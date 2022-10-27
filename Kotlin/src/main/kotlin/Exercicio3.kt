@@ -1,4 +1,5 @@
 fun main() {
+
     println()
     println("Exercicio 1")
     println()
@@ -37,11 +38,11 @@ fun verificaSeEquadrado() {
 fun verificaTriangulo() {
 
     println("Digite um número: ")
-    var inputn1 = readLine()
+    val inputn1 = readLine()
     println("Digite outro número: ")
-    var inputn2 = readLine()
+    val inputn2 = readLine()
     println("Digite outro número: ")
-    var inputn3 = readLine()
+    val inputn3 = readLine()
 
     if (inputn1 != inputn2 || inputn1 != inputn3) {
         println("Não é um triangulo equilátero")
@@ -64,18 +65,30 @@ fun entradaPortaria() {
             val tipoConvite = readLine()
 
             if (tipoConvite != null) {
-                if(tipoConvite.lowercase() != "comum" || tipoConvite.lowercase() != "premium" || tipoConvite.lowercase() != "luxo"){
-                    println("Convite inválido")
-                }else{
+                if (tipoConvite.lowercase() != "comum" && tipoConvite.lowercase() != "premium" && tipoConvite.lowercase() != "luxo") {
+                    println("Tipo de convite  inválido")
+                } else {
                     println("Digite o código do convite: ")
                     val codConvite = readLine()
-                    if(tipoConvite.lowercase() == "premium" || tipoConvite.lowercase() == "luxo"){
-                        if(codConvite != null){
-                            if ()
+                    if (tipoConvite.lowercase() == "premium" || tipoConvite.lowercase() == "luxo") {
+                        if (codConvite != null) {
+                            if (codConvite.uppercase().startsWith("XL")) {
+                                println("Welcome :)")
+                            }
+                        } else {
+                            println("Código do convite Inválido")
+                        }
+                    } else if (tipoConvite.lowercase() == "comum") {
+                        if (codConvite != null) {
+                            if (codConvite.uppercase().startsWith("XT")) {
+                                println("Welcome :)")
+                            } else {
+                                println("Código do convite Inválido")
+                            }
                         }
                     }
                 }
-            }else{
+            } else {
                 println("Convite inválido")
             }
         }
