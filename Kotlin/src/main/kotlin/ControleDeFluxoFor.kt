@@ -1,7 +1,21 @@
 fun main() {
 
     /*
+    //A principal diferença enre do while e while é que o while valida antes de iniciar
+    var i = 0
+
+    do {
+        print("$i" )
+        i++
+    } while ( i < 100)
+
+    /*
+
+     */
     //While
+
+
+
 
     // Usando em uma String
     val string1 = "Kotlin é show"
