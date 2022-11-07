@@ -20,6 +20,9 @@ fun main() {
     print("Exercicio 3")
     println()
     for(i in 1..50){
+        if(i % 5 == 0){
+            continue
+        }
         print("$i ")
     }
 
@@ -29,7 +32,7 @@ fun main() {
     print("Exercicio 4")
     var soma = 0
     for (i in 1 ..500){
-        soma += 1
+        soma += i
     }
     print(soma)
 
