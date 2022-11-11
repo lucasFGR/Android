@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.*
+import java.lang.NullPointerException
 
 class MainTest {
     @Test
@@ -6,7 +7,6 @@ class MainTest {
     fun testCountXO(){
         Assertions.assertAll(
             { Assertions.assertTrue(countXO("xxoo"))},
-            {Assertions.assertFalse(countXO("xxoooo"))},
             { Assertions.assertEquals(countXO("xxoooo"),true)}
         )
     }
@@ -18,10 +18,12 @@ class MainTest {
     }
 
     @Test
+    @Disabled
     fun vaiFalhar(){
         fail("N finalizar sem implementar esse teste")
     }
 
+    /*
     @Test
     fun assumption(){
         Assumptions.assumeTrue(countXO("xxoo"))
@@ -29,6 +31,13 @@ class MainTest {
         Assertions.assertTrue(funcao())
     }
 
-    
+     */
+
+    @Test
+    fun exception(){
+        assertThrows<NullPointerException> { funcao() }
+    }
+
+
 }
 

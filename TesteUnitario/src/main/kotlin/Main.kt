@@ -17,7 +17,9 @@ fun countXO(str: String): Boolean {
 }
 
 fun funcao():Boolean{
-    return  true
+    val srt: String? = null
+    return srt!!.length == 0
+
 }
 
 fun main() {
