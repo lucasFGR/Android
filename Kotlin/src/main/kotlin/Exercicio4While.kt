@@ -82,11 +82,16 @@ fun searchX(str: String) {
     }
 }
 
+<<<<<<< HEAD
+        investiPaula += rendiMentoPaula
+
+=======
 fun investRetorno() {
     val salario = 10000f
     var patAna = 0f
     var patPaula = 0f
     var mes = 0
+>>>>>>> f9e394d95bf93971b118eba726a98d2401a5b439
 
     do {
         patAna += (salario * 0.05f) + (salario * 0.05f)
