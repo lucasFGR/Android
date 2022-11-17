@@ -94,7 +94,7 @@ fun investRetorno (){
         investiAna += qtdEnvestida
 
         investiPaula += rendiMentoPaula
-        
+
 
         if( investiPaula > investiAna){
             println("$i meses")
