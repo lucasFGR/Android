@@ -41,68 +41,64 @@ fun main() {
     investRetorno()
 }
 
-fun fizzBuzz(){
+fun fizzBuzz() {
     var contador = 1
-    while(contador <= 50){
-
-        if( contador % 3 == 1 ){
-            println("Buzz")
-        }else if(contador % 5 == 1){
-            println("Fizz")
-        }else if(contador % 3 == 1 && contador % 5 == 1){
+    while (contador <= 50) {
+        if (contador % 3 == 1 && contador % 5 == 1) {
             println("FizzBuzz")
+        } else if (contador % 3 == 0) {
+            println("Buzz")
+        } else if (contador % 5 == 1) {
+            println("Fizz")
         }
         contador++
 
     }
 }
 
-fun invertTexto (text:String){
-    val  lengthText = text.length
+fun invertTexto(text: String) {
+    val lengthText = text.length
     print(text.reversed())
 }
 
-fun searchX(str:String){
+fun searchX(str: String) {
     val stringLength = str.length
     var i = 0
     var qtdX = 0
     var qtdO = 0
-    while (i < stringLength){
+    while (i < stringLength) {
 
-        if(str[i] == 'x'){
+        if (str[i] == 'x') {
             qtdX += 1
-        }else if(str[i]== 'o'){
+        } else if (str[i] == 'o') {
             qtdO += 1
         }
         i++
     }
-    if(qtdO == qtdX){
+    if (qtdO == qtdX) {
         print(true)
-    }else{
+    } else {
         print(false)
     }
 }
-fun investRetorno (){
-    var i = 0
-    val qtdEnvestida = 5 / 10 * 10000
-    var investiAna = 10000
-    var investiPaula = 5000
-    while(true){
-        val rendiMentoAna = (2 * investiAna) / 100
-        val rendiMentoPaula = (8 * investiPaula) / 100
-        investiAna += rendiMentoAna
-        investiAna += qtdEnvestida
 
+<<<<<<< HEAD
         investiPaula += rendiMentoPaula
 
+=======
+fun investRetorno() {
+    val salario = 10000f
+    var patAna = 0f
+    var patPaula = 0f
+    var mes = 0
+>>>>>>> f9e394d95bf93971b118eba726a98d2401a5b439
 
-        if( investiPaula > investiAna){
-            println("$i meses")
-            println("TOTAL PAULA: $investiPaula")
-            print("TOTAL ANA: $investiAna")
-            break
-        }
-        i++
-    }
+    do {
+        patAna += (salario * 0.05f) + (salario * 0.05f)
+        patPaula += (salario * 0.05f) + (patPaula * 0.008f)
+        mes ++
+    } while (patAna > patPaula)
+
+    print("Paula vai passar o património da Ana em $mes (s)")
 
 }
